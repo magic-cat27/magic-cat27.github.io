@@ -4,243 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jingpeng Zhang | Zhejiang University</title>
-    <style>
-        :root {
-            --zju-blue: #003e8c; /* 浙大标准蓝 */
-            --bg-gray: #f8f9fa;
-            --text-main: #2c3e50;
-            --accent: #3498db;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-gray);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-radius: 12px;
-        }
-
-        /* 头部设计 */
-        header {
-            display: flex;
-            align-items: center;
-            border-bottom: 2px solid var(--zju-blue);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
-
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 12px; /* 方圆风格，更具现代学术感 */
-            object-fit: cover;
-            margin-right: 40px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .header-info h1 {
-            margin: 0;
-            font-size: 2.2em;
-            color: var(--zju-blue);
-        }
-
-        .header-info p {
-            margin: 5px 0;
-            font-size: 1.1em;
-            color: #666;
-        }
-
-        /* 章节标题 */
-        h2 {
-            color: var(--zju-blue);
-            border-left: 5px solid var(--zju-blue);
-            padding-left: 15px;
-            margin-top: 40px;
-            font-size: 1.5em;
-        }
-
-        h3 {
-            color: #444;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #eee;
-        }
-
-        /* 内容板块 */
-        .card {
-            background: #fff;
-            padding: 10px 0;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        li::before {
-            content: "•";
-            color: var(--zju-blue);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* 链接样式 */
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: var(--zju-blue);
-            text-decoration: underline;
-        }
-
-        /* 项目与作品列表 */
-        .item-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-
-        .tag {
-            font-size: 0.75em;
-            background: #e1f0ff;
-            color: var(--zju-blue);
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-right: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.85em;
-            color: #888;
-        }
-
-        /* 响应式适配 */
-        @media (max-width: 600px) {
-            header { flex-direction: column; text-align: center; }
-            .avatar { margin-right: 0; margin-bottom: 20px; }
-            .container { padding: 20px; margin: 10px; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
 <div class="container">
+    <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" aria-current="page">个人介绍</a>
+        <a href="pages/portfolio.html">作品集</a>
+    </nav>
     <header>
-        <img src="Images/avatar.jpg" alt="Zhang Jingpeng" class="avatar">
+        <img src="assets/images/avatar.jpg" alt="张京鹏" class="avatar">
         <div class="header-info">
-            <h1>Jingpeng Zhang (张京鹏)</h1>
-            <p><strong>Zhejiang University</strong> · Major in Artificial Intelligence</p>
-            <p>Email: <a href="mailto:jingpeng27@zju.edu.cn">jingpeng27@zju.edu.cn</a></p>
-            <p>Github: <a href="https://github.com/magic-cat27">magic-cat27</a></p>
+            <h1>张京鹏</h1>
+            <p><strong>浙江大学</strong> · 大二 · 人工智能</p>
+            <p><a class="contact-link" href="mailto:jingpeng27@zju.edu.cn" aria-label="邮箱：jingpeng27@zju.edu.cn"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>jingpeng27@zju.edu.cn</span></a></p>
+            <p><a class="contact-link" href="https://www.zhihu.com/people/71-24-80-83-92" aria-label="张京鹏的知乎主页"><svg class="contact-icon" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078c-.271.73-.5 1.434-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58.104 58.104 0 01-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.223 9.223 0 01-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125zM13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg><span>知乎</span></a></p>
+            <p><a class="contact-link" href="https://github.com/magic-cat27" aria-label="GitHub：magic-cat27"><svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297C5.37.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>magic-cat27</span></a></p>
         </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
+    <section id="about">
+        <h2>个人简介</h2>
         <div class="card">
-            <p>I am an undergraduate student majoring in Artificial Intelligence at Zhejiang University . My research interests center on <strong>Explainable Artificial Intelligence (XAI)</strong>, <strong>Machine Learning</strong> and <strong>Applied Mathematics</strong>.</p>
-            <p>Beyond academics, I enjoy watching <strong>Anime</strong>, playing <strong>Go (WeiQi)</strong>, and following discussions on <strong>Business</strong>, <strong>Finance</strong>, and <strong>Politics</strong>.</p>
+            <p>我是浙江大学人工智能专业的大二学生，目前在 <a href="https://github.com/zju3dv" target="_blank" rel="noopener noreferrer">ZJU3DV</a> 实验室开展具身导航方向的研究，师从<a href="https://pengsida.net/" target="_blank" rel="noopener noreferrer">彭思达</a>、<a href="https://www.xzhou.me/" target="_blank" rel="noopener noreferrer">周晓巍</a>老师。</p>
+            <p>我的研究兴趣是具身智能。我的愿景是：将 AI 的智能从数字世界带到物理世界。此外，我也关注 AI for Math，关心人工智能如何参与数学探索与研究。</p>
+            <p>科研之外，我喜欢在知乎分享观点、参与讨论，话题主要围绕 AI 科技与 AI for Math。我曾发起关于“AI 是否在毁掉数学”的提问，登上<a href="pages/zhihu.html">知乎热搜榜第一</a>；多篇回答获得数百乃至上千赞。闲暇时，我也喜欢探索 AI 的新奇玩法，包括搭建 AI 工作流，用 AI 探索前沿数学问题等等。</p>
         </div>
     </section>
 
     <section>
-        <h2>Honors & Achievements</h2>
+        <h2>个人荣誉</h2>
         <div class="card">
             <ul>
-                <li>First Prize, National College Students Mathematics Competition (Provincial Level, 2024)</li>
-                <li>Euclid Contest: Ranked in Top 25%</li>
-                <li>3-dan rank in Go</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Creations</h2>
-        <div class="card">
-            <h3>Academic Research</h3>
-            <div class="item-row">
-                <span><span class="tag">Paper</span>An Adaptive Interpretable Transformer Model Based on Dynamic Token Vector Dimension Expansion</span>
-                <a href="creations/Adaptive_Interpretable_Transformer.pdf" target="_blank">[PDF]</a>
-            </div>
-
-            <h3>Reflections</h3>
-            <ul>
-                <li class="item-row">
-                    <span>A Declaration by Silicon Intelligences</span>
-                    <a href="creations/Silicon_Based_Intelligence.pdf" target="_blank">[PDF]</a>
-                </li>
-                <li class="item-row">
-                    <span>Malice (恶意) </span>
-                    <a href="creations/Malice.pdf" target="_blank">[PDF]</a>
-                </li>
-                <li class="item-row">
-                    <span>Matriarchal Society: Chance or Necessity? (母系氏族：偶然or必然？) </span>
-                    <a href="creations/Matriarchal_Society_Chance_or_Necessity.pdf" target="_blank">[PDF]</a>
-                </li>
-                <li class="item-row">
-                    <span>Competition and the Way (竞与道) </span>
-                    <a href="creations/Competition_and_the_Way.pdf" target="_blank">[PDF]</a>
-                </li>
-                <li class="item-row">
-                    <span>Reflections on Mathematics Competitions (数竞总结) </span>
-                    <a href="creations/Math_Competition_Reflections.pdf" target="_blank">[PDF]</a>
-                </li>
-            </ul>
-            <h3>Learning Resources</h3>
-            <div class="item-row">
-                <span>Learning Route for Machine Learing</span>
-                <a href="creations/ML_Route.pdf" target="_blank">[PDF]</a>
-            </div>
-    </section>
-
-    <section>
-        <h2>Program Experience</h2>
-        <div class="card">
-            <div class="item-row">
-                <span><strong>Hull-Tactical Market Prediction</strong></span>
-                <a href="https://github.com/suncongyun318/hull-tactical-team">GitHub Repository</a>
-            </div>
-            <div class="item-row">
-                <span><strong>Digit Lab</strong></span>
-                <a href="https://github.com/magic-cat27/digit-lab">GitHub Repository</a>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Student Activities</h2>
-        <div class="card">
-            <ul>
-                <li>Member of the Quantitative Department, ZJU Investment Association</li>
-                <li>Member of the Yixing Department, Wuji Go Club of ZJU</li>
+                <li>高中数学竞赛省级一等奖</li>
+                <li>欧几里得数学竞赛全球前 25%</li>
             </ul>
         </div>
     </section>
